@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LITTLE CLAW · 몽글 장난감 가게</title>
+<style>
+*{box-sizing:border-box}
+:root{color:#503b52;font:15px system-ui,sans-serif;background:#fff8ed}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#fffdf6 25%,transparent 70%),repeating-linear-gradient(90deg,#f8dddf 0 35px,#fbe9e6 35px 70px)}
+main{width:min(94%,490px);margin:auto;text-align:center;padding:22px 0}
+header{font-size:11px;font-weight:800;letter-spacing:.3em}
+h1{font:900 clamp(36px,9vw,56px)/1 Georgia,serif;margin:8px 0 5px;color:#794c73;text-shadow:2px 3px #ffe1a4}
+p{margin:8px 0 14px}
+.machine{border:2px solid #a86c91;border-radius:34px 34px 24px 24px;background:linear-gradient(110deg,#fcd8e6,#f3a9c9 65%,#dc8fb9);padding:12px;box-shadow:inset 0 0 0 5px #ffffff59,0 8px #a86c91,0 18px 34px #89456244}
+.sign{margin:0 0 9px;background:#ffedb3;border:2px solid #bc8e8a;border-radius:19px 19px 9px 9px;padding:8px;font: bold 15px Georgia,serif;letter-spacing:.22em;box-shadow:inset 0 0 0 3px #fff7dc}
+.stage{display:block;width:100%;border:5px solid #fff3f8;border-radius:14px;background:#d8e9ea;box-shadow:0 0 0 2px #a86c91}
+.controls{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:11px}
+button{cursor:pointer;font:800 12px system-ui;letter-spacing:.08em;color:#543c59;border:2px solid #936b93;border-radius:999px;background:#eee1ff;padding:10px 15px;box-shadow:0 4px #936b93;transition:transform .13s}
+button:hover:enabled{transform:scale(1.06)}
+button:active:enabled{transform:translateY(3px);box-shadow:0 1px #936b93}
+button:disabled{opacity:.67;cursor:wait}
+button:focus-visible{outline:3px solid #64446c;outline-offset:4px}
+#grab,.again{background:#ffedaf}
+#status{margin:20px 0 4px;font-weight:700}
+small{color:#644b64}
+dialog{width:min(86%,330px);border:2px solid #a86c91;border-radius:24px;background:#fff7ee;color:inherit;text-align:center;padding:22px;box-shadow:0 8px #ad7999}
+dialog[open]{animation:pop .32s cubic-bezier(.2,1.6,.55,1)}
+dialog::backdrop{background:#4c324c66}
+#prize{width:110px;height:110px;margin:auto}
+#title{margin:5px 0}
+@keyframes pop{from{transform:scale(.78);opacity:0}to{transform:scale(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<header>✦ &nbsp; MONGLE TOY SHOP &nbsp; ✦</header>
+<h1>LITTLE CLAW</h1>
+<p>오늘은 어떤 친구를 데려갈까?</p>
+<section class="machine" aria-label="인형뽑기 기계">
+<div class="sign">✧ &nbsp; PLUSH CLUB &nbsp; ✧</div>
+<svg class="stage" viewBox="0 0 420 317" aria-hidden="true">
+<defs>
+<linearGradient id="glass" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#e7f4ed"/><stop offset="1" stop-color="#e7d6f1"/></linearGradient>
+<linearGradient id="metal"><stop stop-color="#776a8c"/><stop offset=".45" stop-color="#fff5fd"/><stop offset="1" stop-color="#8c7c9c"/></linearGradient>
+<pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.5" fill="#fff" opacity=".75"/></pattern>
+</defs>
+<path fill="url(#glass)" d="M0 0h420v260H0z"/>
+<path fill="url(#dots)" d="M0 0h420v229H0z"/>
+<path d="M0 0l24 20v204L0 252zm420 0l-24 20v204l24 28z" fill="#a99cbe" opacity=".3"/>
+<path d="M0 252l24-28h372l24 28z" fill="#d8bfd8"/>
+<rect x="17" y="20" width="386" height="9" rx="4.5" fill="url(#metal)" stroke="#867a96"/>
+<path d="M355 171h48v83h-48z" fill="#b8a1bf" opacity=".65"/>
+<path d="M355 171v80m48-80v80" stroke="#fff6fc" stroke-width="2"/>
+<g id="toys"></g>
+<path id="cable" stroke="#766884" stroke-width="3"/>
+<g id="claw" fill="none" stroke-linecap="round">
+<path id="arms" stroke="#736482" stroke-width="8"/>
+<path id="shine" stroke="url(#metal)" stroke-width="5"/>
+<rect x="-13" y="-8" width="26" height="16" rx="6" fill="url(#metal)" stroke="#776a8c"/>
+</g>
+<path d="M39 38h22L20 151v-54zm32 0h9L20 193v-22zm307 0h12l-46 104h-12z" fill="#fff" opacity=".32" pointer-events="none"/>
+<path d="M0 252h420v65H0z" fill="#f6c0d9"/>
+<path d="M0 252h420" stroke="#ae759d" stroke-width="3"/>
+<g fill="#844f7c" font-family="Georgia,serif" font-weight="bold">
+<text x="22" y="277" font-size="13" letter-spacing="2">MONGLE ARCADE</text>
+<text x="22" y="299" font-size="10" letter-spacing="2">01  /  PLUSH EDITION</text>
+</g>
+<rect x="345" y="259" width="68" height="48" rx="10" fill="#875a86" stroke="#fff2fa" stroke-width="3"/>
+<rect x="352" y="267" width="54" height="19" rx="5" fill="#4e3454"/>
+<text x="379" y="300" fill="#fff0fa" text-anchor="middle" font-size="9" font-weight="bold" letter-spacing="2">PRIZE</text>
+<g id="sparks" fill="#fff5a6" stroke="#b27b87" opacity="0">
+<path d="M345 259l3-8 3 8 8 3-8 3-3 8-3-8-8-3z"/>
+<path d="M395 247l2-6 2 6 6 2-6 2-2 6-2-6-6-2z"/>
+</g>
+</svg>
+<div class="controls">
+<button id="left" aria-label="왼쪽 이동">◀ LEFT</button>
+<button id="grab">GRAB!</button>
+<button id="right" aria-label="오른쪽 이동">RIGHT ▶</button>
+</div>
+</section>
+<p id="status" aria-live="polite">좌우로 집게를 움직여 봐!</p>
+<small>키보드 ← → 로 이동 · 스페이스바로 뽑기</small>
+</main>
+<dialog aria-labelledby="title">
+<svg id="prize" viewBox="-50 -23 100 105" aria-hidden="true"></svg>
+<h2 id="title"></h2>
+<p id="description"></p>
+<button class="again" autofocus>TRY AGAIN</button>
+</dialog>
+<script>
+const get = selector => document.querySelector(selector);
+const animals = [
+  {name:'버터 곰돌이', coat:'#f6c880', shade:'#dba267', ears:'bear'},
+  {name:'딸기 토끼', coat:'#f6b7ce', shade:'#dc89af', ears:'rabbit'},
+  {name:'라벤더 고양이', coat:'#d6b9eb', shade:'#b392d4', ears:'cat'},
+  {name:'크림 강아지', coat:'#f8e4cb', shade:'#b7806b', ears:'dog'},
+  {name:'레몬 병아리', coat:'#ffe88b', shade:'#edba66', ears:'chick'},
+  {name:'우유 판다', coat:'#fff2e9', shade:'#7f7289', ears:'panda'}
+];
+const roundEars = '<circle cx="-23" cy="9" r="12"/><circle cx="23" cy="9" r="12"/>';
+const ears = {
+  bear:roundEars, panda:roundEars,
+  rabbit:'<ellipse cx="-13" cy="2" rx="9" ry="22" transform="rotate(-12 -13 2)"/><ellipse cx="12" cy="1" rx="9" ry="23" transform="rotate(11 12 1)"/>',
+  cat:'<path d="M-30 26Q-34 8-27 2q6 0 19 12h16Q21 2 27 2q7 6 3 24z"/>',
+  dog:'<ellipse cx="-29" cy="23" rx="10" ry="19" transform="rotate(24 -29 23)"/><ellipse cx="29" cy="23" rx="10" ry="19" transform="rotate(-24 29 23)"/>',
+  chick:'<path d="M-13 13Q-15 0-5 1l6 7Q9-3 13 4l-2 11z"/>'
+};
+function plush(animal) {
+  const {coat, shade, ears:type} = animal;
+  const eyePatches = type === 'panda'
+    ? '<ellipse cx="-13" cy="27" rx="8" ry="9" fill="#95849c"/><ellipse cx="13" cy="27" rx="8" ry="9" fill="#95849c"/>' : '';
+  const muzzle = type === 'chick'
+    ? '<path d="M-6 31Q0 27 6 31L0 37z" fill="#de905a"/>'
+    : '<ellipse cy="34" rx="10" ry="7" fill="#fff5e8"/><path d="M-3 31Q0 29 3 31L0 34z" fill="#69475f"/><path d="M-5 35q3 4 5 0 3 4 5 0" fill="none" stroke="#69475f" stroke-linecap="round"/>';
+  return `<g stroke="#79566c" stroke-width="1.6" stroke-linejoin="round">
+    <g fill="${shade}">${ears[type]}</g>
+    <ellipse cy="54" rx="25" ry="20" fill="${coat}"/>
+    <ellipse cy="57" rx="14" ry="12" fill="#fff6e7" opacity=".76" stroke="none"/>
+    <ellipse cx="-18" cy="66" rx="12" ry="8" fill="${shade}"/>
+    <ellipse cx="18" cy="66" rx="12" ry="8" fill="${shade}"/>
+    <ellipse cy="26" rx="33" ry="23" fill="${coat}"/>
+    <path d="M-30 30Q-9 56 30 31Q24 49 0 49Q-24 49-30 30Z" fill="${shade}" opacity=".32" stroke="none"/>
+    <path d="M-23 16q7-8 20-8" stroke="#fff" opacity=".65" fill="none" stroke-linecap="round"/>
+    <path d="M-13 49q12 5 26 0" stroke="${shade}" stroke-dasharray="2 3" fill="none"/>
+    <g stroke="none">
+      ${eyePatches}
+      <ellipse cx="-13" cy="26" rx="2.7" ry="3.5" fill="#483444"/>
+      <ellipse cx="13" cy="26" rx="2.7" ry="3.5" fill="#483444"/>
+      <circle cx="-13.6" cy="25" r=".8" fill="#fff"/>
+      <circle cx="12.4" cy="25" r=".8" fill="#fff"/>
+      <ellipse cx="-21" cy="34" rx="5.5" ry="2.7" fill="#e98ba5" opacity=".7"/>
+      <ellipse cx="21" cy="34" rx="5.5" ry="2.7" fill="#e98ba5" opacity=".7"/>
+      ${muzzle}
+    </g>
+  </g>`;
+}
+const spots = [
+  [49,150,-13,3], [129,143,11,5], [208,145,-8,1], [292,151,14,2],
+  [79,177,9,0], [167,174,-10,4], [254,177,7,3], [320,181,-8,5]
+];
+const controls = ['#left','#grab','#right'].map(get);
+const toys = get('#toys'), dialog = get('dialog'), status = get('#status');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const chute = 379;
+let x = 208, y = 61, closed = false, busy = false, pile = [];
+
+function drawClaw() {
+  get('#claw').setAttribute('transform', `translate(${x} ${y})`);
+  get('#cable').setAttribute('d', `M${x} 25V${y}`);
+  const shape = closed
+    ? 'M-8 5Q-25 18-8 31M8 5Q25 18 8 31'
+    : 'M-8 5Q-29 13-22 29M8 5Q29 13 22 29';
+  get('#arms').setAttribute('d', shape);
+  get('#shine').setAttribute('d', shape);
+}
+function place(toy, px, py, tilt = toy.tilt) {
+  toy.node.setAttribute('transform', `translate(${px} ${py}) rotate(${tilt})`);
+}
+function reset() {
+  x = 208;
+  y = 61;
+  closed = false;
+  busy = false;
+  toys.replaceChildren();
+  pile = spots.map(([px,py,tilt,index]) => {
+    const node = document.createElementNS('http://www.w3.org/2000/svg','g');
+    const animal = animals[index];
+    const toy = {px,py,tilt,animal,node};
+    node.innerHTML = plush(animal);
+    place(toy, px, py);
+    toys.append(node);
+    return toy;
+  });
+  controls.forEach(button => button.disabled = false);
+  status.textContent = '좌우로 집게를 움직여 봐!';
+  drawClaw();
+}
+function move(step) {
+  if (busy) return;
+  x = Math.max(37, Math.min(383, x + step));
+  drawClaw();
+}
+function tween(ms, draw) {
+  if (reducedMotion.matches) {
+    draw(1);
+    return Promise.resolve();
+  }
+  return new Promise(resolve => {
+    const start = performance.now();
+    function frame(now) {
+      const progress = Math.min(1, (now - start) / ms);
+      draw(progress * progress * (3 - 2 * progress));
+      if (progress < 1) requestAnimationFrame(frame);
+      else resolve();
+    }
+    requestAnimationFrame(frame);
+  });
+}
+function travel(toX, toY, duration, carried) {
+  const startX = x, startY = y;
+  return tween(duration, t => {
+    x = startX + (toX - startX) * t;
+    y = startY + (toY - startY) * t;
+    drawClaw();
+    if (carried) place(carried, x, y + 23, Math.sin(t * Math.PI) * 6);
+  });
+}
+async function grab() {
+  if (busy) return;
+  busy = true;
+  controls.forEach(button => button.disabled = true);
+  status.textContent = '집게가 내려가는 중…';
+  const nearest = [...pile].reverse().sort((a,b) => Math.abs(x-a.px) - Math.abs(x-b.px))[0];
+  const target = Math.abs(x-nearest.px) <= 22 ? nearest : null;
+  await travel(x, target ? target.py - 23 : 177, 620);
+  closed = true;
+  drawClaw();
+  const success = Boolean(target) && Math.random() < .75;
+  if (target) {
+    toys.append(target.node);
+    await tween(140, t => place(target, target.px + (x-target.px)*t, target.py, target.tilt*(1-t)));
+    await travel(x, success ? 61 : 112, 460, target);
+    if (success) await travel(chute, 61, 680, target);
+    closed = false;
+    drawClaw();
+    const dropX = x, dropY = y + 23;
+    await tween(390, t => {
+      const endX = success ? chute : target.px;
+      const endY = success ? 264 : target.py;
+      place(target, dropX + (endX-dropX)*t, dropY + (endY-dropY)*t, t*(success ? 18 : target.tilt));
+      if (success) target.node.setAttribute('opacity', String(1-Math.max(0,(t-.68)/.32)));
+    });
+    if (success) {
+      target.node.remove();
+      await tween(460, t => get('#sparks').setAttribute('opacity', String(Math.sin(t*Math.PI))));
+    } else {
+      const index = pile.indexOf(target);
+      toys.insertBefore(target.node, pile[index+1]?.node ?? null);
+    }
+  }
+  if (!success) await travel(x, 61, 400);
+  status.textContent = success ? '새 친구를 데려왔어!' : '아쉽게 놓쳤어!';
+  get('#title').textContent = success ? '인형뽑기 성공!' : '아쉽게 놓쳤어!';
+  get('#description').textContent = success ? target.animal.name + '를 데려왔어!' : '집게를 인형 가까이 옮겨서 다시 도전해 봐.';
+  get('#prize').innerHTML = success ? plush(target.animal) : '<path d="M0 0L8 22 31 23 13 38 19 60 0 47-19 60-13 38-31 23-8 22Z" fill="#ffdfa3" stroke="#bb859c" stroke-width="2"/>';
+  dialog.showModal();
+}
+controls[0].onclick = () => move(-10);
+controls[1].onclick = grab;
+controls[2].onclick = () => move(10);
+get('.again').onclick = () => dialog.close();
+dialog.addEventListener('close', () => {
+  reset();
+  get('#grab').focus();
+});
+document.addEventListener('keydown', event => {
+  if (dialog.open) return;
+  if (!['ArrowLeft','ArrowRight',' '].includes(event.key)) return;
+  event.preventDefault();
+  if (event.key === 'ArrowLeft') move(-10);
+  if (event.key === 'ArrowRight') move(10);
+  if (event.key === ' ' && !event.repeat) grab();
+});
+reset();
+</script>
+</body>
+</html>
